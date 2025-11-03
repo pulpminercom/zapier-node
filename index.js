@@ -14,4 +14,7 @@ module.exports = {
   triggers: { [apiIdTriggerTrigger.key]: apiIdTriggerTrigger },
   creates: { [getCreate.key]: getCreate, [postCreate.key]: postCreate },
   searches: {},
+  flags: {
+    cleanInputData: false,  // global flag (defaults to true if not set)
+  },
 };
