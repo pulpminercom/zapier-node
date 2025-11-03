@@ -11,7 +11,7 @@ const perform = async (z, bundle) => {
     params: {},
     body: {
       callbackURL,
-      inputData: z.JSON.parse(JSON.stringify(bundle.inputData.post_body))
+      inputData: z.JSON.parse(bundle.inputData.post_body)
     },
     removeMissingValuesFrom: {
       body: false,

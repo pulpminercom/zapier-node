@@ -12,16 +12,18 @@ describe('creates.post', () => {
     const bundle = {
       inputData: {
         api_id: "100",
-        post_body: {
+        post_body: JSON.stringify({
           "test": "body"
-        }
+        })
       }
     };
 
     nock('https://api.pulpminer.com')
       .post('/external/zapier/post/100', {
-        inputData: bundle.inputData.post_body,
-        callbackURL: "https://auth-json-server.zapier-staging.com/echo"
+        callbackURL: "https://auth-json-server.zapier-staging.com/echo",
+        inputData: {
+          "test": "body"
+        },
       })
       .reply(201, {
         data: {
