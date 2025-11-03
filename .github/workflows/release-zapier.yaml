@@ -24,6 +24,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: npm ci
+      - name: Install Zapier Platform CLI
+        run: npm i zapier-platform-cli
       - name: Extract version from package.json
         uses: sergeysova/jq-action@v2
         id: version
