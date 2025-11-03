@@ -25,7 +25,7 @@ describe('creates.post', () => {
       })
       .reply(201, {
         data: {
-          message: `Job created for https://example.com`
+          _sys_message_: `Job created for https://example.com`
         },
         errors: null
       })
@@ -38,7 +38,7 @@ describe('creates.post', () => {
     expect(results).toBeDefined();
     expect(results).toEqual({
       data: {
-        message: `Job created for https://example.com`
+        _sys_message_: `Job created for https://example.com`
       },
       errors: null
     });

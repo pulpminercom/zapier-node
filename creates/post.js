@@ -11,7 +11,7 @@ const perform = async (z, bundle) => {
     params: {},
     body: {
       callbackURL,
-      inputData: bundle.inputData.post_body
+      inputData: z.JSON.parse(JSON.stringify(bundle.inputData.post_body))
     },
     removeMissingValuesFrom: {
       body: false,
@@ -55,7 +55,7 @@ module.exports = {
       },
     ],
     outputFields: [
-      { key: 'data', label: 'Contains message when job is created' },
+      { key: 'data', label: 'Contains all structured data' },
       { key: 'errors', label: 'Contains errors if any' },
     ],
     sample: { data: null, errors: null },
