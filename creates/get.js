@@ -43,7 +43,7 @@ module.exports = {
     ],
     sample: { data: null, errors: null },
     outputFields: [
-      { key: 'data', label: 'Contains structured data' },
+      { key: 'data', label: 'Contains message when job is created' },
       { key: 'errors', label: 'Contains errors if any' },
     ],
   },
