@@ -9,10 +9,10 @@ const perform = async (z, bundle) => {
       Accept: 'application/json',
     },
     params: {},
-    body: z.JSON.stringify({
+    body: {
       callbackURL,
       inputData: bundle.inputData.post_body
-    }),
+    },
     removeMissingValuesFrom: {
       body: false,
       params: false,
