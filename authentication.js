@@ -1,5 +1,5 @@
 const connectionLabel = async (z, bundle) => {
-  return `PulpMiner Account with ${bundle.authData.apikey.slice(0, 4)}${'*'.repeat(5)} API Key`;
+  return `Using ${bundle.testData.data.name}'s Account`;
 };
 
 module.exports = {

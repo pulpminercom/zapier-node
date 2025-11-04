@@ -1,4 +1,4 @@
-name: Release to Zapier on version change
+name: Release to Zapier on version change on Main Branch
 
 on:
   push:
@@ -26,6 +26,8 @@ jobs:
         run: npm ci
       - name: Install Zapier Platform CLI
         run:  npm install -g zapier-platform-cli
+      - name: Run Tests
+        run: npm run test
       - name: Extract version from package.json
         uses: sergeysova/jq-action@v2
         id: version

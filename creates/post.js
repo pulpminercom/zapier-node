@@ -63,8 +63,8 @@ module.exports = {
   display: {
     description: 'Consume a POST API created in PulpMiner',
     hidden: false,
-    label: 'Use a POST API',
+    label: 'Consumes a POST API',
   },
   key: 'post',
-  noun: 'POST',
+  noun: 'POST API',
 };

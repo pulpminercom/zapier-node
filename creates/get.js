@@ -48,10 +48,10 @@ module.exports = {
     ],
   },
   display: {
-    description: 'Consume a GET API created in PulpMiner',
+    description: 'Consumes a GET API',
     hidden: false,
     label: 'Use a GET API',
   },
   key: 'get',
-  noun: 'GET',
+  noun: 'GET API',
 };
