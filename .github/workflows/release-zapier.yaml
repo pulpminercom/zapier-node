@@ -1,10 +1,9 @@
-name: Release to Zapier with same version on Other Branch (Not main)
+name: Release to Zapier on version change on Main Branch
 
 on:
   push:
     branches:
-      - chore/**
-      - feature/**
+      - main
 
 permissions:
   contents: read
@@ -25,11 +24,20 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: npm ci
-      - name: Run Tests
-        run: npm run test
       - name: Install Zapier Platform CLI
         run:  npm install -g zapier-platform-cli
+      - name: Run Tests
+        run: npm run test
+      # - name: Extract version from package.json
+      #   uses: sergeysova/jq-action@v2
+      #   id: version
+      #   with:
+      #     cmd: 'jq .version package.json -r'
+      # - name: Get latest tag
+      #   uses: actions-ecosystem/action-get-latest-tag@v1
+      #   id: get-latest-tag
       - name: Publish to Zapier
+        # if: ${{ contains(steps.get-latest-tag.outputs.tag, steps.version.outputs.value) == false }}
         run: zapier-platform push
         env:
           ZAPIER_DEPLOY_KEY: ${{ secrets.ZAPIER_DEPLOY_KEY }}

@@ -1,6 +1,6 @@
 {
   "name": "pulp-miner",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "PulpMiner is a tool that lets you convert any webpage to realtime JSON API",
   "main": "index.js",
   "scripts": {
