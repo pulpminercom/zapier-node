@@ -1,4 +1,4 @@
-name: Release to Zapier with same version on Other Branch (Not main)
+name: Checks for Zapiers
 
 on:
   push:
@@ -25,11 +25,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: npm ci
-      - name: Run Tests
-        run: npm run test
       - name: Install Zapier Platform CLI
         run:  npm install -g zapier-platform-cli
-      - name: Publish to Zapier
-        run: zapier-platform push
-        env:
-          ZAPIER_DEPLOY_KEY: ${{ secrets.ZAPIER_DEPLOY_KEY }}
+      - name: Run Tests
+        run: npm run test
