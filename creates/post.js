@@ -61,9 +61,9 @@ module.exports = {
     sample: { data: null, errors: null },
   },
   display: {
-    description: 'Consume a POST API created in PulpMiner',
+    description: 'Consumes a POST API.',
     hidden: false,
-    label: 'Consumes a POST API',
+    label: 'Use a POST API',
   },
   key: 'post',
   noun: 'POST API',

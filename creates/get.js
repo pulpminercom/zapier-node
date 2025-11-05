@@ -48,7 +48,7 @@ module.exports = {
     ],
   },
   display: {
-    description: 'Consumes a GET API',
+    description: 'Consumes a GET API.',
     hidden: false,
     label: 'Use a GET API',
   },
